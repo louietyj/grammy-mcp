@@ -12,23 +12,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/louietyj/grammyjs-mcp.git"
+    "url": "git+https://github.com/louietyj/grammy-mcp.git"
   },
   "license": "MIT",
-  "homepage": "https://github.com/louietyj/grammyjs-mcp#readme",
+  "homepage": "https://github.com/louietyj/grammy-mcp#readme",
+  "keywords": ["grammy", "telegram", "telegram-bot", "mcp", "model-context-protocol"],
   "dependencies": {
     "@cfworker/json-schema": "^4.1.6",
     "@grammyjs/auto-retry": "^2.0.2",
-    "@modelcontextprotocol/sdk": "^1.32.2",
-    "grammy": "^1.46.0"
+    "@modelcontextprotocol/sdk": "^1.32.2"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
+    "grammy": "^1.46.0",
     "tsx": "^4.23.15",
     "typescript": "^5.7.3",
     "vitest": "^5.1.0"
   },
-  "private": true,
   "type": "module",
   "types": "dist/mod.d.ts",
   "exports": {

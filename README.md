@@ -6,10 +6,8 @@ The tools are generated at build time from the installed grammY's own type decla
 
 ## Server
 
-Not on npm yet, so run it straight from GitHub (it builds on install):
-
 ```bash
-BOT_TOKEN=<token from @BotFather> npx -y github:louietyj/grammyjs-mcp
+BOT_TOKEN=<token from @BotFather> npx -y grammy-mcp
 ```
 
 Tools are named exactly like grammY's methods (`sendMessage`, `editMessageTextInline`). Which ones an agent may use is up to your MCP client's permissions.
@@ -19,14 +17,14 @@ Tools are named exactly like grammY's methods (`sendMessage`, `editMessageTextIn
 Claude Code:
 
 ```bash
-claude mcp add telegram -e BOT_TOKEN=<token> -- npx -y github:louietyj/grammyjs-mcp
+claude mcp add telegram -e BOT_TOKEN=<token> -- npx -y grammy-mcp
 ```
 
 ## Library
 
 ```ts
 import { Api } from "grammy";
-import { attachTools, createTools } from "grammy-mcp"; // npm i github:louietyj/grammyjs-mcp
+import { attachTools, createTools } from "grammy-mcp"; // npm i grammy-mcp grammy
 
 // deny: tools never exposed or callable, whatever the client allows
 const tools = createTools(new Api(token), { deny: ["logOut", "close"] });
