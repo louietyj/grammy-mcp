@@ -1,0 +1,49 @@
+{
+  "name": "grammy-mcp",
+  "version": "0.1.0",
+  "description": "Every grammY Api method as an MCP tool",
+  "main": "dist/mod.js",
+  "scripts": {
+    "generate": "tsx scripts/generate.ts",
+    "build": "npm run generate && tsc",
+    "prepare": "npm run build",
+    "test": "npm run generate && vitest run",
+    "typecheck": "npm run generate && tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louietyj/grammyjs-mcp.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/louietyj/grammyjs-mcp#readme",
+  "dependencies": {
+    "@cfworker/json-schema": "^4.1.6",
+    "@grammyjs/auto-retry": "^2.0.2",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "grammy": "^1.46.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^5.7.3",
+    "vitest": "^5.1.0"
+  },
+  "private": true,
+  "type": "module",
+  "types": "dist/mod.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/mod.d.ts",
+      "default": "./dist/mod.js"
+    }
+  },
+  "bin": {
+    "grammy-mcp": "dist/bin.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "grammy": "^1.46.0"
+  }
+}
